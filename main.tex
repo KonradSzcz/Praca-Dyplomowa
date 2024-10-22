@@ -1,0 +1,53 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[authordate, backend=biber, uniquename=false, mincitenames=1, maxcitenames=4, citetracker]{biblatex-chicago}
+\addbibresource{references.bib} 
+
+\DefineBibliographyStrings{polish}{
+    andothers = {i in.}, % Zmiana "et al." na "i in."
+    and = {i},           % Zmiana "and" na "i"
+}
+
+\makeatletter
+\AtEveryCitekey{\ifciteseen{\defcounter{maxnames}{2}}{\defcounter{maxnames}{4}}}
+\renewcommand*{\nameyeardelim}{\addcomma\space}
+\makeatother
+
+
+\input{_settings.tex} % load additional variables
+
+
+\begin{document}
+    % --------
+    % TITLE PAGE
+    % --------
+    \newgeometry{margin=2.5cm}
+    \input{_title-page.tex}
+
+    % --------
+    % DOCUMENT
+    % --------
+    \newgeometry{top=2cm,bottom=2cm,left=3cm,right=2cm}
+    \tableofcontents
+
+    % --------
+    % CHAPTERS
+    % --------
+    \newgeometry{top=2cm,bottom=2cm,left=3cm,right=2cm}
+    \input{chapters/Chapter1}
+    \input{chapters/Chapter2}
+    \input{chapters/Chapter3}
+    \input{chapters/Chapter4}
+    \input{chapters/Chapter5}
+    
+    % Bibliografia
+    \newpage
+    \printbibliography
+    
+    
+\end{document}

@@ -1,0 +1,42 @@
+% ------------------------------
+% VARIABLES
+% ------------------------------
+\def\varAcademyPartI{Akademia Nauk Stosowanych}
+\def\varAcademyPartII{w Nowym Sączu}
+\def\varInstitute{Wydział Nauk Inżynieryjnych}
+\def\varTitle{Mobilna aplikacja edukacyjna do nauki o Kryptowalutach}
+\def\varAuthor{Konrad Szczurek}
+\def\varMajor{Informatyka}
+\def\varAlbumNumber{31282}
+\def\varSupervisor{Witold Przygoda}
+\def\varCity{Nowy Sącz}
+
+% ------------------------------
+% CUSTOM FONT SIZES
+% https://latextutorial.net/font-size-latex/
+% ------------------------------
+\newcommand\customnormalsize{\fontsize{12bp}{14.4bp}\selectfont}
+\newcommand\customlarge{\fontsize{14bp}{16.8bp}\selectfont}
+\newcommand\customLarge{\fontsize{16bp}{19.2bp}\selectfont}
+\newcommand\customLARGE{\fontsize{18bp}{21.6bp}\selectfont}
+
+% ------------------------------
+% THESIS CONFIGURATION
+% ------------------------------
+\graphicspath{{images/}} % specify path to images
+\setmainfont{Times New Roman} % set `Times New Roman` font
+\linespread{1.5} % Line spacing
+\setlength{\parskip}{12pt plus 6pt minus 4pt} % Paragraph spacing
+\setlength{\parindent}{0.75cm} % Indentation
+\pagestyle{plain} % Page numbering
+\justifying % Text justification
+\setcounter{tocdepth}{2} % Table of contents depth
+\hypersetup{ % Hyperlinks/Metadata setup
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={\varTitle - \varAuthor},
+    pdfsubject={\varTitle},
+    pdfauthor={\varAuthor},
+}
